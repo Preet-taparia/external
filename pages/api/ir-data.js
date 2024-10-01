@@ -1,6 +1,7 @@
 export default async function handler(req, res) {
     if (req.method === 'POST') {
       const { ir_code } = req.body;
+      console.log(ir_code);
   
       if (!ir_code) {
         return res.status(400).json({ message: 'IR code is missing' });
